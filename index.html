@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="login-screen">
+            
+            <div class="login-screen__title-holder">
+                <div class="login-screen__title">WELCOME TO COSMIC ASSESSMENT TEST</div>
+                <div class="login-screen__text">Please enter your username below to proceed.</div>
+            </div>
+
+            <div class="login-screen__input-holder">
+                <label for="input">Username:</label>
+                <input type="text" id="input" placeholder="Username">
+            </div>
+
+            <div class="login-screen__button button">GET STARTED</div>
+
+        </div>
+
+        <div class="quiz-screen">
+
+            <div class="quiz-screen__top">
+                <div class="quiz-screen__left">
+                    <div class="quiz-screen__left__text">QUESTION</div>
+                    <div class="quiz-screen__question-no">1/10</div>
+                </div>
+                <div class="quiz-screen__right">
+                    <div class="quiz-screen__right-text">Timer</div>
+                    <div class="quiz-screen__timer">00:00</div>
+                </div>
+            </div>
+
+            <div class="quiz__main-container">
+                <div class="quiz__question"></div>
+
+                <div class="option__container">
+                    <div class="opt opt--1"></div>
+                    <div class="opt opt--2"></div>
+                    <div class="opt opt--3"></div>
+                    <div class="opt opt--4"></div>
+                </div>
+            </div>
+
+            <div class="quiz__screen__button button">SUBMIT</div>
+
+        </div>
+
+        <div class="passed-screen">
+            <div class="passed-screen__popup">
+                <div class="passed-screen__popup__icon">
+                    <i class="ri-check-line"></i>
+                    <div class="passed-screen__popup__status">Passed</div>
+                </div>
+                <div class="passed-screen__popup__text">Congratulation <span id="p-user"></span> you needed a score of 5+ to pass this test and you scored <span id="p_score"></span> Outstanding performance</div>
+            </div>
+
+            <div class="return__button passed-screen__return_button">
+                RETURN
+                <i class="ri-download-line return__icon"></i>
+            </div>
+
+        </div>
+
+
+        <div class="fail-screen">
+            <div class="fail-screen__popup">
+                <div class="fail-screen__popup__icon">
+                    <i class="ri-close-line"></i>
+                    <div class="fail-screen__popup__status">Failed</div>
+                </div>
+                <div class="fail-screen__popup__text">Dear <span id="f-user"></span>, unfortunately you did'nt make the cut. You needed a score of 5+ to pass this test whereas you scored only <span id="f_score"></span>, Better luck next time!</div>
+            </div>
+
+            <div class="return__button fail-screen__return_button">
+                RETURN
+                <i class="ri-download-line return__icon"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

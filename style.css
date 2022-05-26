@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.main-container {
+    width: 400px;
+    margin: auto;
+}
+
+.login-screen {
+    background-color: red;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(login-bg.jpeg);
+    background-size: cover;
+    height: 100vh;
+    width: 400px;
+    padding: 0 10px;
+}
+
+.login-screen__title-holder {
+    color: #fff;
+    padding: 40px;
+    padding-top: 120px;
+}
+
+.login-screen__title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.login-screen__text {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.login-screen__input-holder {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+#input {
+    padding: 14px;
+    outline: none;
+    border: 1px solid gray;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: #FF6B2F;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    width: calc(400px - 20px);
+    cursor: pointer;
+}
+
+/* ------------------- Quiz Screen --------------------- */
+
+.quiz-screen {
+    background-color: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(login-bg.jpeg);
+    background-size: cover;
+    height: 100vh;
+    width: 400px;
+    padding: 0 10px;
+    display: none;
+}
+
+.quiz-screen__top {
+    padding-top: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz-screen__left__text, .quiz-screen__right-text {
+    color: #FF6B2F;
+    font-size: 14px;
+}
+
+.quiz-screen__left, .quiz-screen__right {
+    text-align: center;
+}
+
+.quiz-screen__question-no, .quiz-screen__timer {
+    background-color: #191919;
+    padding: 5px 10px;
+}
+
+.quiz__main-container {
+    color: #fff;
+    margin-top: 150px;
+}
+
+.quiz__question {
+    text-align: center;
+}
+
+.option__container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.opt {
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.opt:hover {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #000;
+}
+
+.opt__active {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #000;
+}
+
+.quiz__screen__button {
+    background-color: #656878;
+}
+
+.quiz__screen__button__active{
+    background-color: #FF6B2F;
+}
+
+/* ------------- Passed-screen ----------------- */
+.passed-screen {
+    background-color: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(login-bg.jpeg);
+    background-size: cover;
+    height: 100vh;
+    width: 400px;
+    padding: 0 10px;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+
+.passed-screen__popup {
+    color: #fff;
+    background-color: #141415;
+    height: 360px;
+    padding: 30px;
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+
+.passed-screen__popup__icon {
+    text-align: center;
+    color: #00A460;
+}
+
+.passed-screen__popup__icon i {
+    font-size: 60px;
+}
+
+.passed-screen__popup__status {
+    font-size: 24px;
+}
+
+.passed-screen__popup__text {
+    margin-top: 40px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.return__button {
+    position: absolute;
+    bottom: 30px;
+    border: 3px solid #009356;
+    width: calc(400px - 20px);
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 50%, #0093568a);
+    cursor: pointer;
+}
+
+.return__icon {
+    position: absolute;
+    transform: rotate(-90deg);
+    font-size: 24px;
+    right: 10px;
+    color: #fff;
+}
+
+/* --------------- Failed-Screen --------------------*/
+.fail-screen {
+    background-color: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(login-bg.jpeg);
+    background-size: cover;
+    height: 100vh;
+    width: 400px;
+    padding: 0 10px;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+
+.fail-screen__popup {
+    color: #fff;
+    background-color: #141415;
+    height: 360px;
+    padding: 30px;
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+
+.fail-screen__popup__icon {
+    text-align: center;
+    color: #FF645A;
+}
+
+.fail-screen__popup__icon i {
+    font-size: 60px;
+}
+
+.fail-screen__popup__status {
+    font-size: 24px;
+}
+
+.fail-screen__popup__text {
+    margin-top: 40px;
+    font-size: 22px;
+    text-align: center;
+}
