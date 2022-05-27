@@ -6,6 +6,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(bg.jpg);
+    background-size: cover;
 }
 
 .main-container {
@@ -14,10 +17,6 @@ body {
 }
 
 .login-screen {
-    background-color: red;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(login-bg.jpeg);
-    background-size: cover;
     height: 100vh;
     width: 400px;
     padding: 0 10px;
@@ -30,17 +29,26 @@ body {
 }
 
 .login-screen__title {
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
+    line-height: 1.6;
 }
 
 .login-screen__text {
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 
+label{
+    font-weight: bold;
+}
+
 .login-screen__input-holder {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -66,13 +74,14 @@ body {
     cursor: pointer;
 }
 
+.login-screen__button{
+    background-color: #656878;
+    cursor: auto;
+}
+
 /* ------------------- Quiz Screen --------------------- */
 
 .quiz-screen {
-    background-color: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(login-bg.jpeg);
-    background-size: cover;
     height: 100vh;
     width: 400px;
     padding: 0 10px;
@@ -91,8 +100,12 @@ body {
     font-size: 14px;
 }
 
-.quiz-screen__left, .quiz-screen__right {
+.quiz-screen__left {
     text-align: center;
+}
+
+.quiz-screen__right{
+    text-align: right;
 }
 
 .quiz-screen__question-no, .quiz-screen__timer {
@@ -101,8 +114,13 @@ body {
 }
 
 .quiz__main-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: #fff;
-    margin-top: 150px;
+    width: 400px;
+    padding: 0 10px;
 }
 
 .quiz__question {
@@ -139,18 +157,16 @@ body {
 
 .quiz__screen__button {
     background-color: #656878;
+    cursor: auto;
 }
 
 .quiz__screen__button__active{
     background-color: #FF6B2F;
+    cursor: pointer;
 }
 
 /* ------------- Passed-screen ----------------- */
 .passed-screen {
-    background-color: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(login-bg.jpeg);
-    background-size: cover;
     height: 100vh;
     width: 400px;
     padding: 0 10px;
@@ -196,8 +212,11 @@ body {
     padding: 10px;
     border-radius: 8px;
     color: #fff;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 50%, #0093568a);
     cursor: pointer;
+}
+
+.return__button:hover{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 50%, #0093568a);
 }
 
 .return__icon {
@@ -210,10 +229,6 @@ body {
 
 /* --------------- Failed-Screen --------------------*/
 .fail-screen {
-    background-color: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(login-bg.jpeg);
-    background-size: cover;
     height: 100vh;
     width: 400px;
     padding: 0 10px;

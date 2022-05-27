@@ -34,6 +34,14 @@ const quizScreenSubmitButton = document.querySelector('.quiz__screen__button')
 const options = document.querySelectorAll('.opt')
 const timer = document.querySelector('.quiz-screen__timer')
 
+loginScreenInput.addEventListener('input', () => {
+    if(loginScreenInput.value === ''){
+        loginScreenBtn.classList.remove('quiz__screen__button__active')
+    }else{
+        loginScreenBtn.classList.add('quiz__screen__button__active')
+    }
+})
+
 loginScreenBtn.addEventListener('click', () => {
 
     if (loginScreenInput.value === '') {
